@@ -1,0 +1,36 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="BaseRepository.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <OpenApiReference Include="..\..\..\..\Downloads\mysql-connector\net5.0\MySql.Data.dll">
+      <CodeGenerator>NSwagCSharp</CodeGenerator>
+      <Link>OpenAPIs\MySql.Data.dll</Link>
+    </OpenApiReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="FluentAssertions" Version="6.7.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="5.0.17" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="5.0.17">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+    <PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="5.0.0" />
+    <PackageReference Include="Portable.BouncyCastle" Version="1.9.0" />
+    <PackageReference Include="System.Configuration.ConfigurationManager" Version="6.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\BanHang.Appication\BanHang.Appication.csproj" />
+    <ProjectReference Include="..\BanHang.Infrastructure\BanHang.Infrastructure.csproj" />
+  </ItemGroup>
+
+</Project>

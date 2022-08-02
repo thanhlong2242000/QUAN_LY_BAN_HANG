@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="CustomModel\" />
+    <Folder Include="Events\" />
+    <Folder Include="EventHandles\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\dependencies\BaseRepository\BaseRepository.csproj" />
+  </ItemGroup>
+
+</Project>
