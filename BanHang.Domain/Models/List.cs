@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace BanHang.Domain.Models
+﻿namespace BanHang.Domain.Models
 {
     public class List
     {
