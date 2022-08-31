@@ -13,5 +13,6 @@ namespace BanHang.Appication.Interfaces
         object GetUser();
         object GetProduct(int productId);
         object AddUser(User user);
+
     }
 }

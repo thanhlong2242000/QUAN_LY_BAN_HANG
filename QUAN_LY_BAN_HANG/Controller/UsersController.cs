@@ -3,6 +3,7 @@ using BanHang.Appication.Models;
 using BanHang.Domain.Models;
 using Microsoft.AspNetCore.Mvc;
 using System;
+using System.Threading.Tasks;
 
 namespace QUAN_LY_BAN_HANG.Controller
 {
@@ -10,7 +11,7 @@ namespace QUAN_LY_BAN_HANG.Controller
     [ApiController]
     public class UsersController : ControllerBase
     {
-        private IBanHangServices _BanHangServices;
+        private readonly IBanHangServices _BanHangServices;
         public UsersController(IBanHangServices BanHangServices)
         {
             _BanHangServices = BanHangServices;
@@ -35,10 +36,11 @@ namespace QUAN_LY_BAN_HANG.Controller
         {
             try
             {
-                var ab = _BanHangServices.AddUser(user);
-                return new ResponseData(true, "200", ab);
+                var themmoiuser = _BanHangServices.AddUser(user);
+
+                return new ResponseData(true, "200", themmoiuser);
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 return new ResponseData(false, ex.Message, null);
             }
